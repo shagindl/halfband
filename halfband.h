@@ -2,6 +2,7 @@
 #include <memory>
 #include <stdlib.h>
 #include <string.h>
+#include "library/Delegate.h"
 
 template<int n, int order, typename T = double, bool steep = false> 
 class Halfband {
@@ -29,7 +30,7 @@ class Halfband {
         }
     } allpass;
 
-     class allpass_cascade {
+    class allpass_cascade {
         std::unique_ptr<allpass> filters[6];
         const int NF;
     public:
@@ -52,7 +53,6 @@ class Halfband {
         std::unique_ptr<allpass_cascade> b;
         T oldout;
         // --
-        int i, j, k;
         halfband_t* next;
 
         halfband_t();
@@ -62,23 +62,48 @@ class Halfband {
             output = (a->process(input) + oldout) * 0.5;
             oldout = b->process(input);
 
-            return output;        
+            return output;
         }
-    } halfband;
+    }halfband;
+
+    struct halfband_cascade {
+        uint32_t i = 0;
+        halfband_t hb;
+        halfband_cascade *next;
+        Delegate<5> Output;
+    
+        void process(const T& input) {
+            
+            T output = hb.process(input);
+            
+            if ( !(++i % 2) ) {
+                Output(output);
+                if(next) next->process(output);
+            }
+        }
+    };
 
     /* cascade of half band filters, for 2^n times oversampling */
-    halfband halfs[n];
+    halfband_cascade halfs[n];
     T buf[1 << n];
 public:
     Halfband() {
-        halfs[0].next = nullptr;
+        halfs[n - 1].next = nullptr;
         for (int i = 1; i < n; i++) {
             halfs[i - 1].next = &halfs[i];
         }
         for (auto& data : buf) data = 0.;
     }
+    inline Delegate<5>& Subscribe(const int i) {
+        assert(i < n);
+
+        return halfs[i].Output;
+    }
     // should receive an array of 2**n inputs to process
-    double process(const T* input);
+    T process(const T* input);
+    void process(const T& input) {
+        halfs[0].process(input);
+    }
     //double process_half_cascade_v2(const double* input);
     //double process_half_cascade(halfband* half, const double input);
 };
@@ -303,17 +328,15 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
         }
     }
     oldout = 0;
-    i = 0;
-    j = 0;
-    k = 0;
 }
 
+#if 0
 // should receive an array of 2**n inputs to process
 // will return a single value following a cascade of filter->decimate steps
 template<int n, int order, typename T, bool steep>
 double Halfband<n, order, T, steep>::process(const T* input) {
     int i, j, k;
-    double b;
+    T b;
     int nbuf;
     nbuf = 1 << n;
 
@@ -346,3 +369,28 @@ double Halfband<n, order, T, steep>::process(const T* input) {
     // final fully decimated sample
     return buf[0];
 }
+#elif 1
+    template<int n, int order, typename T, bool steep>
+    T Halfband<n, order, T, steep>::process(const T* input) {
+        T b;
+        int nbuf = 1 << n;
+        const T* input_buf = input;
+
+        for (int i = 0; i < n; i++) {
+            int k = 0;
+            for (int j = 0; j < nbuf; j += 2) {
+                // note that we process the buffer in-place, writing
+                // the decimated sample at the start of the buffer, always
+                // behind the position read
+                b = halfs[i].hb.process(input_buf[j]);
+                b = halfs[i].hb.process(input_buf[j + 1]);
+                buf[k++] = b;
+            }
+            input_buf = buf;
+            // next buf size
+            nbuf >>= 1;
+        }
+
+        return input_buf[0];
+    }
+#endif

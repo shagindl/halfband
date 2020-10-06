@@ -52,6 +52,44 @@ public:
             }
         }
     }
+    TEST_METHOD(test_process_receive_single) {
+        double buf[BUF_SIZE], gain, filt_sum;
+        Halfband<2, 8> cascade;
+
+        const std::function<void(const double&)> hb_output = [&](const double& filt)->void {
+            filt_sum += pow(filt, 2);
+        };
+        cascade.Subscribe(2 - 1).Connect(hb_output);
+
+        for (int k = 1; k < MAX_FREQS; k++) {
+            double orig_sum = 0, freq = 1000, Ks;
+
+            Ks = 3 * (MAX_FREQS / k);
+            test_sine(buf, BUF_SIZE, freq, Ks * freq);
+
+            for (int j = 0; j < BUF_SIZE; j++) {
+                cascade.process(buf[j]);
+                // skip transient
+                if (j > BUF_SIZE / 3) {
+                    orig_sum += pow(buf[j], 2);
+                }else filt_sum = 0;
+            }
+            gain = 20 * log10(sqrt(filt_sum) / sqrt(orig_sum / 4));
+
+            std::wstringstream str;
+            str << L"\nKs = " << Ks << L"; orig_sum/4 = " << orig_sum / 4 << L"; filt_sum = " << filt_sum << L"\n";
+
+            if (Ks > 16) {
+                Assert::AreEqual(0, gain, 0.05, str.str().c_str(), LINE_INFO());
+            } else if (Ks >= 8) {
+                Assert::AreEqual(0, gain, 0.06, str.str().c_str(), LINE_INFO());
+            } else if (Ks > 4) {
+                Assert::AreEqual(-110, gain, 20, str.str().c_str(), LINE_INFO());
+            } else {
+                Assert::IsTrue(-100 > gain, str.str().c_str(), LINE_INFO());
+            }
+        }
+    }
 };
 
 const int test_halfband::BUF_SIZE;
