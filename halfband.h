@@ -59,7 +59,7 @@ class Halfband {
         T process(const T& input){
             T output = input;
 
-            output = (a->process(input) + oldout) * 0.5;
+            output = (a->process(input) + oldout) * 0.5f;
             oldout = b->process(input);
 
             return output;
@@ -85,14 +85,12 @@ class Halfband {
 
     /* cascade of half band filters, for 2^n times oversampling */
     halfband_cascade halfs[n];
-    T buf[1 << n];
 public:
     Halfband() {
         halfs[n - 1].next = nullptr;
         for (int i = 1; i < n; i++) {
             halfs[i - 1].next = &halfs[i];
         }
-        for (auto& data : buf) data = 0.;
     }
     inline Delegate<5>& Subscribe(const int i) {
         assert(i < n);
@@ -100,12 +98,9 @@ public:
         return halfs[i].Output;
     }
     // should receive an array of 2**n inputs to process
-    T process(const T* input);
-    void process(const T& input) {
+    __ramfunc void process(const T& input) {
         halfs[0].process(input);
     }
-    //double process_half_cascade_v2(const double* input);
-    //double process_half_cascade(halfband* half, const double input);
 };
 
 template<int n, int order, typename T, bool steep>
@@ -116,21 +111,21 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
         if (order == 12)    //rejection=104dB, transition band=0.01
         {
             constexpr T a_coefficients[6] =
-            { 0.036681502163648017
-            ,0.2746317593794541
-            ,0.56109896978791948
-            ,0.769741833862266
-            ,0.8922608180038789
-            ,0.962094548378084
+            { 0.036681502163648017f
+            ,0.2746317593794541f
+            ,0.56109896978791948f
+            ,0.769741833862266f
+            ,0.8922608180038789f
+            ,0.962094548378084f
             };
 
             constexpr T b_coefficients[6] =
-            { 0.13654762463195771
-            ,0.42313861743656667
-            ,0.6775400499741616
-            ,0.839889624849638
-            ,0.9315419599631839
-            ,0.9878163707328971
+            { 0.13654762463195771f
+            ,0.42313861743656667f
+            ,0.6775400499741616f
+            ,0.839889624849638f
+            ,0.9315419599631839f
+            ,0.9878163707328971f
             };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 6);
@@ -139,19 +134,19 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
         else if (order == 10)    //rejection=86dB, transition band=0.01
         {
             constexpr T a_coefficients[5] =
-            { 0.051457617441190984
-            ,0.35978656070567017
-            ,0.6725475931034693
-            ,0.8590884928249939
-            ,0.9540209867860787
+            { 0.051457617441190984f
+            ,0.35978656070567017f
+            ,0.6725475931034693f
+            ,0.8590884928249939f
+            ,0.9540209867860787f
             };
 
             constexpr T b_coefficients[5] =
-            { 0.18621906251989334
-            ,0.529951372847964
-            ,0.7810257527489514
-            ,0.9141815687605308
-            ,0.985475023014907
+            { 0.18621906251989334f
+            ,0.529951372847964f
+            ,0.7810257527489514f
+            ,0.9141815687605308f
+            ,0.985475023014907f
             };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 5);
@@ -161,17 +156,17 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
         else if (order == 8)    //rejection=69dB, transition band=0.01
         {
             constexpr T a_coefficients[4] =
-            { 0.07711507983241622
-            ,0.4820706250610472
-            ,0.7968204713315797
-            ,0.9412514277740471
+            { 0.07711507983241622f
+            ,0.4820706250610472f
+            ,0.7968204713315797f
+            ,0.9412514277740471f
             };
 
             constexpr T b_coefficients[4] =
-            { 0.2659685265210946
-            ,0.6651041532634957
-            ,0.8841015085506159
-            ,0.9820054141886075
+            { 0.2659685265210946f
+            ,0.6651041532634957f
+            ,0.8841015085506159f
+            ,0.9820054141886075f
             };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 4);
@@ -181,15 +176,15 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
         else if (order == 6)    //rejection=51dB, transition band=0.01
         {
             constexpr T a_coefficients[3] =
-            { 0.1271414136264853
-            ,0.6528245886369117
-            ,0.9176942834328115
+            { 0.1271414136264853f
+            ,0.6528245886369117f
+            ,0.9176942834328115f
             };
 
             constexpr T b_coefficients[3] =
-            { 0.40056789819445626
-            ,0.8204163891923343
-            ,0.9763114515836773
+            { 0.40056789819445626f
+            ,0.8204163891923343f
+            ,0.9763114515836773f
             };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 3);
@@ -198,13 +193,13 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
         else if (order == 4)    //rejection=53dB,transition band=0.05
         {
             constexpr T a_coefficients[2] =
-            { 0.12073211751675449
-            ,0.6632020224193995
+            { 0.12073211751675449f
+            ,0.6632020224193995f
             };
 
             constexpr T b_coefficients[2] =
-            { 0.3903621872345006
-            ,0.890786832653497
+            { 0.3903621872345006f
+            ,0.890786832653497f
             };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 2);
@@ -213,8 +208,8 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
 
         else    //order=2, rejection=36dB, transition band=0.1
         {
-            constexpr T a_coefficients[1] = { 0.23647102099689224 };
-            constexpr T b_coefficients[1] = { 0.7145421497126001 };
+            constexpr T a_coefficients[1] = { 0.23647102099689224f };
+            constexpr T b_coefficients[1] = { 0.7145421497126001f };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 1);
             b = std::make_unique<allpass_cascade>(b_coefficients, 1);
@@ -225,21 +220,21 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
         if (order == 12)    //rejection=150dB, transition band=0.05
         {
             constexpr T a_coefficients[6] =
-            { 0.01677466677723562
-            ,0.13902148819717805
-            ,0.3325011117394731
-            ,0.53766105314488
-            ,0.7214184024215805
-            ,0.8821858402078155
+            { 0.01677466677723562f
+            ,0.13902148819717805f
+            ,0.3325011117394731f
+            ,0.53766105314488f
+            ,0.7214184024215805f
+            ,0.8821858402078155f
             };
 
             constexpr T b_coefficients[6] =
-            { 0.06501319274445962
-            ,0.23094129990840923
-            ,0.4364942348420355
-            ,0.6329609551399348
-            ,0.80378086794111226
-            ,0.9599687404800694
+            { 0.06501319274445962f
+            ,0.23094129990840923f
+            ,0.4364942348420355f
+            ,0.6329609551399348f
+            ,0.80378086794111226f
+            ,0.9599687404800694f
             };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 6);
@@ -248,19 +243,19 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
         else if (order == 10)    //rejection=133dB, transition band=0.05
         {
             constexpr T a_coefficients[5] =
-            { 0.02366831419883467
-            ,0.18989476227180174
-            ,0.43157318062118555
-            ,0.6632020224193995
-            ,0.860015542499582
+            { 0.02366831419883467f
+            ,0.18989476227180174f
+            ,0.43157318062118555f
+            ,0.6632020224193995f
+            ,0.860015542499582f
             };
 
             constexpr T b_coefficients[5] =
-            { 0.09056555904993387
-            ,0.3078575723749043
-            ,0.5516782402507934
-            ,0.7652146863779808
-            ,0.95247728378667541
+            { 0.09056555904993387f
+            ,0.3078575723749043f
+            ,0.5516782402507934f
+            ,0.7652146863779808f
+            ,0.95247728378667541f
             };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 5);
@@ -269,17 +264,17 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
         else if (order == 8)    //rejection=106dB, transition band=0.05
         {
             constexpr T a_coefficients[4] =
-            { 0.03583278843106211
-            ,0.2720401433964576
-            ,0.5720571972357003
-            ,0.827124761997324
+            { 0.03583278843106211f
+            ,0.2720401433964576f
+            ,0.5720571972357003f
+            ,0.827124761997324f
             };
 
             constexpr T b_coefficients[4] =
-            { 0.1340901419430669
-            ,0.4243248712718685
-            ,0.7062921421386394
-            ,0.9415030941737551
+            { 0.1340901419430669f
+            ,0.4243248712718685f
+            ,0.7062921421386394f
+            ,0.9415030941737551f
             };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 4);
@@ -288,15 +283,15 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
         else if (order == 6)    //rejection=80dB, transition band=0.05
         {
             constexpr T a_coefficients[3] =
-            { 0.06029739095712437
-            ,0.4125907203610563
-            ,0.7727156537429234
+            { 0.06029739095712437f
+            ,0.4125907203610563f
+            ,0.7727156537429234f
             };
 
             constexpr T b_coefficients[3] =
-            { 0.21597144456092948
-            ,0.6043586264658363
-            ,0.9238861386532906
+            { 0.21597144456092948f
+            ,0.6043586264658363f
+            ,0.9238861386532906f
             };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 3);
@@ -305,13 +300,13 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
         else if (order == 4)    //rejection=70dB,transition band=0.1
         {
             constexpr T a_coefficients[2] =
-            { 0.07986642623635751
-            ,0.5453536510711322
+            { 0.07986642623635751f
+            ,0.5453536510711322f
             };
 
             constexpr T b_coefficients[2] =
-            { 0.28382934487410993
-            ,0.8344118914807379
+            { 0.28382934487410993f
+            ,0.8344118914807379f
             };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 2);
@@ -320,8 +315,8 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
 
         else    //order=2, rejection=36dB, transition band=0.1
         {
-            constexpr T a_coefficients[1] = { 0.23647102099689224 };
-            constexpr T b_coefficients[1] = { 0.7145421497126001 };
+            constexpr T a_coefficients[1] = { 0.23647102099689224f };
+            constexpr T b_coefficients[1] = { 0.7145421497126001f };
 
             a = std::make_unique<allpass_cascade>(a_coefficients, 1);
             b = std::make_unique<allpass_cascade>(b_coefficients, 1);
@@ -329,68 +324,3 @@ Halfband<n, order, T, steep>::halfband::halfband_t()
     }
     oldout = 0;
 }
-
-#if 0
-// should receive an array of 2**n inputs to process
-// will return a single value following a cascade of filter->decimate steps
-template<int n, int order, typename T, bool steep>
-double Halfband<n, order, T, steep>::process(const T* input) {
-    int i, j, k;
-    T b;
-    int nbuf;
-    nbuf = 1 << n;
-
-    // cascade 1
-    k = 0;
-    for (j = 0; j < nbuf; j += 2) {
-        b = halfs[0].process(input[j]);
-        b = halfs[0].process(input[j + 1]);
-        // decimate and store
-        buf[k++] = b;
-    }
-    // next buf size
-    nbuf >>= 1;
-
-    // subsequent cascades
-    for (i = 1; i < n; i++) {
-        k = 0;
-        for (j = 0; j < nbuf; j += 2) {
-            // note that we process the buffer in-place, writing
-            // the decimated sample at the start of the buffer, always
-            // behind the position read
-            b = halfs[i].process(buf[j]);
-            b = halfs[i].process(buf[j + 1]);
-            buf[k++] = b;
-        }
-        // next buf size
-        nbuf >>= 1;
-    }
-
-    // final fully decimated sample
-    return buf[0];
-}
-#elif 1
-    template<int n, int order, typename T, bool steep>
-    T Halfband<n, order, T, steep>::process(const T* input) {
-        T b;
-        int nbuf = 1 << n;
-        const T* input_buf = input;
-
-        for (int i = 0; i < n; i++) {
-            int k = 0;
-            for (int j = 0; j < nbuf; j += 2) {
-                // note that we process the buffer in-place, writing
-                // the decimated sample at the start of the buffer, always
-                // behind the position read
-                b = halfs[i].hb.process(input_buf[j]);
-                b = halfs[i].hb.process(input_buf[j + 1]);
-                buf[k++] = b;
-            }
-            input_buf = buf;
-            // next buf size
-            nbuf >>= 1;
-        }
-
-        return input_buf[0];
-    }
-#endif
