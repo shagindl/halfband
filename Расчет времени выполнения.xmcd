@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?validation-md5-digest 96332af98e2924abedfd216cd107c749?>
+<?validation-md5-digest ea51484b0df880be0a70ec0b6ac216ad?>
 <worksheet version="3.0.3" xmlns="http://schemas.mathsoft.com/worksheet30" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://schemas.mathsoft.com/worksheet30" xmlns:ml="http://schemas.mathsoft.com/math30" xmlns:u="http://schemas.mathsoft.com/units10" xmlns:p="http://schemas.mathsoft.com/provenance10">
 	<pointReleaseData/>
 	<metadata>
@@ -13,9 +13,9 @@
 			<revisedBy>dlsh10</revisedBy>
 		</userData>
 		<identityInfo>
-			<revision>2</revision>
+			<revision>3</revision>
 			<documentID>88660B3B-E208-4857-9B75-B2FD7180D081</documentID>
-			<versionID>4DABF82D-D748-4899-9F9A-27EDB9A625AD</versionID>
+			<versionID>BC160B04-E7F1-4A6D-B7F9-56CD21487B38</versionID>
 			<parentVersionID>00000000-0000-0000-0000-000000000000</parentVersionID>
 			<branchID>00000000-0000-0000-0000-000000000000</branchID>
 		</identityInfo>
@@ -210,6 +210,216 @@
 			</math>
 			<rendering item-idref="7"/>
 		</region>
+		<region region-id="25" left="432" top="50.25" width="400.5" height="2196" align-x="436.5" align-y="60" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<text use-page-width="false" push-down="false" lock-width="true">
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit"> Thu Oct 08, 2020 11:38:44: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:38:44: CYCLECOUNTER=509251627 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:38:44: CCTIMER1=134554 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:38:44: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:33: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:33: CYCLECOUNTER=509410813 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:33: CCTIMER1=2628 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:33: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:45: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:46: CYCLECOUNTER=509412160 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:46: CCTIMER1=1177 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:46: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:51: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:51: CYCLECOUNTER=509415977 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:51: CCTIMER1=3651 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:51: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:55: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:55: CYCLECOUNTER=509417350 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:55: CCTIMER1=1214 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:55: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:58: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:58: CYCLECOUNTER=509419937 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:58: CCTIMER1=2423 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:58: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:59: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:59: CYCLECOUNTER=509421306 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:59: CCTIMER1=1181 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:39:59: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:01: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:01: CYCLECOUNTER=509426284 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:01: CCTIMER1=4814 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:01: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:02: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:03: CYCLECOUNTER=509427686 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:03: CCTIMER1=1211 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:03: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:03: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:04: CYCLECOUNTER=509430274 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:04: CCTIMER1=2424 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:04: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:05: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:05: CYCLECOUNTER=509431672 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:05: CCTIMER1=1227 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:05: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:06: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:06: CYCLECOUNTER=509435390 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:06: CCTIMER1=3557 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:06: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:07: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:07: CYCLECOUNTER=509436757 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:07: CCTIMER1=1183 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:07: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:09: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:09: CYCLECOUNTER=509439340 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:09: CCTIMER1=2417 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:09: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:10: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:10: CYCLECOUNTER=509440710 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:10: CCTIMER1=1197 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:10: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:12: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:12: CYCLECOUNTER=509446730 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:12: CCTIMER1=5854 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:12: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:21: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:21: CYCLECOUNTER=509448146 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:21: CCTIMER1=1205 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:21: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:22: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:22: CYCLECOUNTER=509450714 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:22: CCTIMER1=2415 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:22: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:24: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:24: CYCLECOUNTER=509452031 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:24: CCTIMER1=1163 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:24: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:26: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:26: CYCLECOUNTER=509455726 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:26: CCTIMER1=3521 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:26: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:27: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:27: CYCLECOUNTER=509457090 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:27: CCTIMER1=1190 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:27: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:28: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:28: CYCLECOUNTER=509459617 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:28: CCTIMER1=2373 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:28: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:29: reset CCTIMER1=0 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:29: CYCLECOUNTER=509460946 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:29: CCTIMER1=1165 </p>
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">
+					<br/>Thu Oct 08, 2020 11:40:29: Breakpoint hit: Code @ DIV_mdl.cpp:70.32, type: default (auto)<sp count="2"/>
+				</p>
+			</text>
+		</region>
 		<region region-id="10" left="18" top="68.25" width="89.25" height="27.75" align-x="32.25" align-y="84" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math optimize="false" disable-calc="false">
 				<ml:define warning="WarnRedefinedBIUnit" xmlns:ml="http://schemas.mathsoft.com/math30">
@@ -233,16 +443,16 @@
 			</math>
 			<rendering item-idref="8"/>
 		</region>
-		<region region-id="17" left="18" top="117" width="55.5" height="12.75" align-x="42.75" align-y="126" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+		<region region-id="17" left="18" top="117" width="46.5" height="12.75" align-x="42.75" align-y="126" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math optimize="false" disable-calc="false">
 				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 					<ml:id xml:space="preserve">Nop</ml:id>
-					<ml:real>62028</ml:real>
+					<ml:real>400</ml:real>
 				</ml:define>
 			</math>
 			<rendering item-idref="9"/>
 		</region>
-		<region region-id="18" left="24" top="141" width="111" height="12.75" align-x="36.75" align-y="150" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+		<region region-id="18" left="24" top="141" width="103.5" height="12.75" align-x="36.75" align-y="150" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math optimize="false" disable-calc="false">
 				<ml:define warning="WarnRedefinedBIUnit" xmlns:ml="http://schemas.mathsoft.com/math30">
 					<ml:id xml:space="preserve">T</ml:id>
@@ -256,7 +466,7 @@
 							<ml:id xml:space="preserve">u</ml:id>
 						</ml:unitOverride>
 						<result xmlns="http://schemas.mathsoft.com/math30">
-							<ml:real>129.22500000000002</ml:real>
+							<ml:real>0.83333333333333337</ml:real>
 						</result>
 					</ml:eval>
 				</ml:define>
@@ -349,30 +559,28 @@ V8X/N/UZLRgQ/N1rv1sELuuSCFxQr/1uVeHiqtQ/75lqUlec2f9M2Qo+VqOpPYc+S+qEinCL
 z3geWIRtc7fr58H7oVJ7Ag0BF6AVvTkDhp65Ge44cIsnQEW4zma4I4VlCspU0eY+OtGBvBzO
 X5EXGxNyNsP9kZKD+/RXD1xQkbyK3pMd0KM2oUN7oc+TdTvP7dKEobZHDPfBGhguehSaKNT2
 aGzPZR1IqX8H6MYzhXnSCwAAAABJRU5ErkJggg==</item>
-		<item item-id="9">iVBORw0KGgoAAAANSUhEUgAAAEoAAAARCAYAAAB6mTpFAAAAAXNSR0IArs4c6QAAAARnQU1B
-AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVFhH7ZXrsYQgDIWpy4Koh2po
-hmLYvMADgo+7/vDueGaY1STG5CO4Lr86pRfUSb2gTuoFdVIKKoW8OJcdLx/FJEL7EnIy83OU
-cli0Pi17vXduyQELrr2gfR6fwmJ2lxdyNBNVnMhKkoXG8BDF7LkRKDYFX5uNnnx1cznWQAgw
-T5Yr8cRF7KYUQo7REyxNpHoiKJ0E3umpAAhRAKD6bDsMJIzHa4O2BUW/Ld0elO2kLBhXIx8i
-/6p/U0wjzbMfM5E14rlOftcoCcdYD3JSIIb720CGeLrRI8nPEOTB0VNQpQlNhqDa3RCgQh7g
-YXF1V/ZkRZXncU0oauOUm90CbQDcGmRxPIIZgoJ4lfVkiSegSLUAACW2wRTxfe+zF016/UrH
-jdO763Rcj2fp98s2kXxzUCSdCn6JWeX7dQUU3s/014lafX3jkafNrkUH36hNPPfSH0O5NuG/
-gMqCatZ2HKWAklBAQQHou1vNprQbwhBXJiF7cUBMA2ESL/kLPOtZrkn6veHVTwEF1kwkSVJi
-YScae+cbSgvA1Jck063vKjnWHsqCXmp9q20vXk+T2nlam4n6SlJID/l39II6qZtA2TmWdXTk
-/qfum6ifVs4fB0ebq86Mz/UAAAAASUVORK5CYII=</item>
-		<item item-id="10">iVBORw0KGgoAAAANSUhEUgAAAJQAAAARCAYAAAA7QYW/AAAAAXNSR0IArs4c6QAAAARnQU1B
-AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKGSURBVGhD7ZeLccMgDIY9lwdijo7A
-NF4mw1AkHhayBI6jOmmO745LwEbo8aO0S5hMDJmCmpgyBTUxZQpqYkoV1MOvYVkWcaz+kd8y
-4OHDWmy7LS9G6Prqg+GJ98VmDPpNcxSz4tfi+xqo6zTGZktF26vbDGELLttcFhdnY4igXDW2
-OZLoWGjXnmJCSUAbfAzOn3H7Oe6OzYIqEJIgHke9eHAZ6Xeh+Npe1WaEPjuL+JPXJP2PeHgf
-ts0x5f+NoCh3xGbFsUMRiHDgPRrTMEZFdO363p2eydcLgkoHavGOQEHFz/ZWcEHRlkvaMQYe
-5xt8pudn/VBjQ3Hns5rbLp1T/Co+8bkNQ0HVLtO+d0pQpBNVpHXMAbenx2/QoehvMBudKhdB
-FWfSeVRQyW4xgcLD21Ocj4MmVLpxAmJsmLT2ZrptcA7uIQLi88q1/ABdQcULUONgnX5YP7qX
-oq1jTlh+lfjf+5OXvydnoIhEUL2C8WcYMO1SfL4jxQaFE+PtndPzzwhdUNEP1knShSuj58dx
-b0JbT2zuNkG92qES6fZDYfMq3jqlYIfiQaF7SdzRBCX62jtHSejRB/sOdSguBfLWsavt7drE
-GD6+Q/H/IHLiazKgeGQOiSo3CJ0nHYg+GyDGJiQH//vrnpP8a56JgrqOJChYq0vFzwL6oAtD
-29u1CUS7Rz3I8TNBsdvULRIz+AR7e+YFiDapwVzQ9C5JVLPOnqkMYsOEMHuDc/Y44lhjdxXe
-uQz1J+ekOQ9Hzl95l8eU/Yft2t6hTRhKkcX487P/BSbKthuI3HXOF1EFtfy02hrN38oU1MeC
-KgGxUMGcmb+P/LcVDqOfF5G7zvkuqqCufE4mLSH8Anm1ggel2KEfAAAAAElFTkSuQmCC</item>
+		<item item-id="9">iVBORw0KGgoAAAANSUhEUgAAAD4AAAARCAYAAACFOx+nAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFbSURBVFhH7VSBjcMgDGQuBmIepmGZ
+DOO3jYHDJdW36Uu80pOiiAM7d7ZJoJvia/xuuLnxI1MMgYI8qSilQD5mOozeCSUFQslDc6SM
+gh0/dfzIUU1OidhuzhOxD8zM0FsoNcO6l5hZ8854plKY7AGCfY0X1pux46K9L1h3tL0F/2ic
+3zI+Y7S9camejIwbJ60kr0sbKT85HjXP8zNPwGYkFkddJxYSyl5kgSt+abyJkqDZOFSRoQl0
+OqAYVrB6bXByzmAdaPH4gNgZQ5M3XjVXoHHPnxhn9PsDxltXfZer03nPinGq/Qp4qtp3Pm+c
+UbsmQcbq/X/FOK7P8HrHVbg7q8bev+PJCbVDPchGuq0lYfsXqHHoMO79IbDjVR80on//ke/G
+RxV9lzhoZO4G61m4wxPv9paoRcTU72A2zug6nA/HTx2/BE3si7Yvvsavwe7+r0Z8D3yu4/8K
+RD/aV+CGMqxbGgAAAABJRU5ErkJggg==</item>
+		<item item-id="10">iVBORw0KGgoAAAANSUhEUgAAAIoAAAARCAYAAAACJjTkAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJsSURBVGhD7ZcLkoMgDIY9lwfyHHsE
+TuNlehgWEgIhJkjV6naWb8ZpjUheP9BOfjDoYAhl0MUQyqCLIZRBF1koLzf7aZrUa3avNOoC
+Xs7PNPeyJmOA22fnL/R4X25XkusxeytEnhfPo9jrdy17D0woS355XZjjEPDy7qwdUNBcK8Hq
+nasMl3B3budZ/ULNBMEswSKRY8p3yglqTAW27J2oR09VzA/xcs6v6xLEwovwGaFw7sjtNLEu
+uZGhJrNcUIFKQEw0nDCPmqtlb3BCKDE4JYFOQCjhM/oqR40UCvrYbJe0glbanvvjMHMD0SZf
+FI/ph+KimOT9OeSK12NGAcE4tfHWomstRjuvC3aUFDBMKK5G90goFAz640ngvDQFCApWEAUf
+rtRQPMa07XmLmttmdUa/O35IRDSVvM+8X5/oh8do9yPFuJmnxF6/Z9kZRl7PHj3pOwYTm8OE
+0mqEfJYKUOol7wtabrIxmZafVnwn6RUK/vZKQlT+AFgLqLaLWhl5/YEdBcHgY4GSFY4CoxGb
+psRk+5pkCUWNteXHKOg2hgP1ibmXzlU7ayb640e2Ngbi1XZayx4w8npwRyn/RJBU0JwtKj3f
+x+JVvx1YYfizHdTclOLAP4SmH4yveqYK5QhCkFpuEJuxKxCV4BiWHdDzEkIR6m8W3wiug9gs
+9CELG+bkE6ZG4Vi2Aiq7eGaykxsURMy346fkEa457IbKmMNk33J1l5rjLoz+SfzcxsVg2TXU
+vNKz7wIKdtXqbXCXny8gC2X6qTWzd/8oQyi3A92PIuBC6Ll/DjzycGu8aJtXucvPd5CFcuRz
+8F/w/hfMXxzF+3L89QAAAABJRU5ErkJggg==</item>
 	</binaryContent>
 </worksheet>
